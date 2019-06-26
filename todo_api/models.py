@@ -1,20 +1,23 @@
 from peewee import *
-
-from flask.cli import with_appcontext
+from flask import current_app, g
+from playhouse.flask_utils import FlaskDB
 import os
 
-DATABASE = SqliteDatabase('./instance/todos.db')
+db_wrapper = FlaskDB()
+
+DATABASE = SqliteDatabase(None)
 
 
-class Todo(Model):
-    name = CharField
+class Todo(db_wrapper.Model):
+    name = CharField()
 
     class Meta:
         database = DATABASE
 
 
-def initialize():
-    DATABASE.connect(reuse_if_open=True)
-    DATABASE.create_tables([Todo], safe=True)
-    DATABASE.close()
+
+
+
+
+
 
