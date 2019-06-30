@@ -1,5 +1,5 @@
-from todo_api import create_app
-import os
+from todo import create_app
+from todo.models import Todo, db_wrapper
 
 
 def test_create_app():
@@ -35,5 +35,4 @@ def test_client(client):
     response = client.get('/hello')
     assert response.data == b'Hello World'
     assert response.status == '200 OK'
-
-
+    assert db_wrapper.database.is_closed()
