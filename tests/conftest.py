@@ -13,7 +13,7 @@ def app():
     """
     app = create_app({
         'TESTING': True,
-        'DATABASE': 'sqlite:///todo.db'
+        'DATABASE': 'sqlite:///:memory:'
         })
 
     return app
@@ -37,6 +37,7 @@ def client(app):
     with app.app_context():
         test_database = db_wrapper.database
         db_wrapper.init_app(app)
+        test_database.connect()
         Todo.bind_ctx(test_database)
         Todo.create_table()
 
