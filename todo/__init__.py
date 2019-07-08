@@ -39,7 +39,6 @@ def create_app(test_config=None):
     # close the database connection
     with app.app_context():
         db_wrapper.init_app(app)
-        print(database.is_closed())
         database.connect(reuse_if_open=True)
         Todo.bind(database)
         Todo.create_table(safe=True)
