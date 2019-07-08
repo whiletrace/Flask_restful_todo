@@ -1,4 +1,7 @@
-# **Todo Restful API**
+# **Todo Restful API** 
+[![Build Status](https://travis-ci.org/whiletrace/Flask_restful_todo.svg?branch=master)](https://travis-ci.org/whiletrace/Flask_restful_todo)
+
+
 
 ## **summary**
 This project is a well tested restful API in this Instance the API is consumed by a Angular Front End
