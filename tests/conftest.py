@@ -35,12 +35,12 @@ def client(app):
     """
     # setup
     with app.app_context():
-        test_database = db_wrapper.database
+        """test_database = db_wrapper.database
         db_wrapper.init_app(app)
         test_database.connect()
         Todo.bind_ctx(test_database)
         Todo.create_table()
-
-    yield app.test_client()
+        """
+    return app.test_client()
     # teardown
-    test_database.close()
+
