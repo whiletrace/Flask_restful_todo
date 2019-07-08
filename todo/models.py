@@ -1,18 +1,16 @@
 from peewee import *
 from playhouse.flask_utils import FlaskDB
 
-"""
-class NewFlaskDb(FlaskDB):
-    subclass of FlaskDB as workaround for db connection leakage
-    def connect_db(self):
-        overridden method now reuses db connection if already open
-        self.database.connect(reuse_if_open=True)
-"""
 
+class NewFlaskDb(FlaskDB):
+    """ subclass of FlaskDB as workaround for db connection leakage"""
+    def connect_db(self):
+        """overridden method now reuses db connection if already open"""
+        self.database.connect(reuse_if_open=True)
 
 
 #  instantiation of Database proxy obj
-db_wrapper = FlaskDB()
+db_wrapper = NewFlaskDb()
 
 
 class Todo(db_wrapper.Model):
