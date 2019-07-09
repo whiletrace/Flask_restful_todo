@@ -28,8 +28,8 @@ which was provided by a second party but included in this repository The API and
  * flask run
  
 #### application:
-* application will be running on  http://127.0.0.1:5000/ to use application  
-* click on new task and a new task will appear click on task created to give it a name, type a name and click save your task will be saved 
+* application will be running on  http://127.0.0.1:5000/ 
+* to use application click on new task and a new task will appear click on task created to give it a name, type a name and click save your task will be saved 
 * checkmark your saved task to mark complete 
 * update your task by clicking task and type something new and  click save 
 * to delete task hit delete
