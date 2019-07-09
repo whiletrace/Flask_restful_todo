@@ -62,7 +62,7 @@ There are two endpoints in this version. One endpoint for multiple resource oper
 
 ###### `GET`Success Response:
 * Code: 200
-* Content: `[ { "id": 1, "name": "cleaning the hippos" }, { "id": 2, "name": "love" }]`
+* Content: `[{ "id": 1, "name": "cleaning the hippos" }, { "id": 2, "name": "rubbing a duck" }]`
 
 ###### `GET`Error Response
 * This endpoint in general will not error for requests for multiple resources If there are no resources will output an empty array `[]`
@@ -103,7 +103,7 @@ There are two endpoints in this version. One endpoint for multiple resource oper
 
 ###### `GET`Success Response:
 * Code: 200
-* Content: `[ { "id": 1, "name": "cleaning the hippos" }, { "id": 2, "name": "love" }]`
+* Content: `{ "id": 1, "name": "cleaning the hippos" }`
 
 ###### `GET`Error Response
 * CODE:404
